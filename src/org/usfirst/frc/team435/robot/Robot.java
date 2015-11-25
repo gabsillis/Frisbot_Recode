@@ -75,7 +75,8 @@ public class Robot extends IterativeRobot {
         leds.sendData();
         
         if(shooter.isActive()){
-        	shooter.setShooterSpeed(OI.smoStick.getThrottle());
+        	shooter.setShooterSpeed(OI.smoStick.getThrottle()); // PLEASE NOTE: If throttle has a range of -1 to 1 make the line equal to:
+//        	shooter.setShooterSpeed((OI.smoStick.getThrottle() + 1 )/ 2);
         }
         
         driveTrain.drive(OI.driveStick.getX(), OI.driveStick.getY(), OI.driveStick.getTwist());

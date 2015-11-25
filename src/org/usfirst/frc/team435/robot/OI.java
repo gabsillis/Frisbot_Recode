@@ -16,7 +16,7 @@ public class OI {
     public static final int DRIVE_STICK_PORT 			= 0;
     
     public static final int SMO_STICK_PORT 				= 1;
-    public static final int SHOOT_BUTTON_ID				= 1;
+    public static final int SHOOT_BUTTON_ID				= 1; // Should be trigger
     public static final int COMPRESSOR_ON_BUTTON_ID		= 2;
     public static final int COMPRESSOR_OFF_BUTTON_ID	= 3;
     public static final int WHEELS_ON_BUTTON_ID			= 4;

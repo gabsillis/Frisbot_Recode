@@ -27,8 +27,8 @@ public class Shooter extends Subsystem {
 		if (speed == 0)
 			stopShooter();
 		else {
-			RobotMap.frontShooter.set(speed);
-			RobotMap.rearShooter.set(speed);
+			RobotMap.frontShooter.set(speed); // This should be the front motor, speed changes apply here
+			RobotMap.rearShooter.set(speed); // This should be the back motor, speed changes apply here
 			this.speed = speed;
 			active = true;
 		}
