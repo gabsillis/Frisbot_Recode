@@ -13,26 +13,26 @@ import edu.wpi.first.wpilibj.SpeedController;
  * floating around.
  */
 public class RobotMap {
-    public static final int FRONT_SHOOTER 				= 5;
-    public static final int REAR_SHOOTER 				= 6;
+    public static final int FRONT_SHOOTER 				= 4;
+    public static final int REAR_SHOOTER 				= 5;
     public static final int SHOOTER_SOLENOID_FORWARD 	= 0; // If the solenoid sits forward and retracts
     public static final int SHOOTER_SOLENOID_REVERSE 	= 1; // with a trigger pull switch these
     
-    public static final int FRONT_LEFT_MOTOR 			= 1;
-    public static final int REAR_LEFT_MOTOR 			= 2;
-    public static final int FRONT_RIGHT_MOTOR 			= 3;
-    public static final int REAR_RIGHT_MOTOR 			= 4;
+    public static final int FRONT_LEFT_MOTOR 			= 3;
+    public static final int REAR_LEFT_MOTOR 			= 1;
+    public static final int FRONT_RIGHT_MOTOR 			= 2;
+    public static final int REAR_RIGHT_MOTOR 			= 0;
     
-    public static SpeedController frontShooter = new CANJaguar(FRONT_SHOOTER);
-    public static SpeedController rearShooter = new CANJaguar(REAR_SHOOTER);
+    public static SpeedController frontShooter = new Jaguar(FRONT_SHOOTER);
+    public static SpeedController rearShooter = new Jaguar(REAR_SHOOTER);
     
     public static Compressor compressor = new Compressor();
     public static DoubleSolenoid solenoid = new DoubleSolenoid(SHOOTER_SOLENOID_FORWARD, SHOOTER_SOLENOID_REVERSE);
     
-    public static SpeedController frontLeftMotor = new CANJaguar(FRONT_LEFT_MOTOR);
-    public static SpeedController rearLeftMotor = new CANJaguar(REAR_LEFT_MOTOR);
-    public static SpeedController frontRightMotor = new CANJaguar(FRONT_RIGHT_MOTOR);
-    public static SpeedController rearRightMotor = new CANJaguar(REAR_RIGHT_MOTOR);
+    public static SpeedController frontLeftMotor = new Jaguar(FRONT_LEFT_MOTOR);
+    public static SpeedController rearLeftMotor = new Jaguar(REAR_LEFT_MOTOR);
+    public static SpeedController frontRightMotor = new Jaguar(FRONT_RIGHT_MOTOR);
+    public static SpeedController rearRightMotor = new Jaguar(REAR_RIGHT_MOTOR);
     
     public static RobotDrive drive = new RobotDrive(frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
 }
